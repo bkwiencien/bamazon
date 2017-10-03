@@ -61,13 +61,13 @@ function promptForPurchase() {
 			} else {
 				var productData = data[0];
 				if (quantity <= productData.stock_quantity) {
-					console.log('the product you requested is in stock! Placing order!');
+					console.log('Placing order!');
 					var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
 
 					connection.query(updateQueryStr, function(err, data) {
 						if (err) throw err;
 
-						console.log('Your order has been placed! Your total is $' + productData.price * quantity);
+						console.log('order has been placed!  total is $' + productData.price * quantity);
 						console.log("\n---------------------------------------------------------------------\n");
 						connection.end();
 					})
