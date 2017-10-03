@@ -11,6 +11,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err){
         if(err){throw err;}
         takeInventory();
+        startTheProcess();
         endItAll();
 
 });
@@ -36,6 +37,9 @@ function takeInventory() {
                 }
                
         });
+    }
+    function startTheProcess() {
+    	
     }
     function endItAll() {
     	connection.end();
