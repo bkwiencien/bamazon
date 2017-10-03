@@ -1,9 +1,9 @@
-// Pull in required dependencies
+
 var inquirer = require('inquirer');
 var mysql = require('mysql');
 var currentInventory = [];
 var status = "";
-// Define the MySQL connection parameters
+
 var connection = mysql.createConnection({
 	host: 'localhost',
 	port: 3306,
@@ -11,8 +11,6 @@ var connection = mysql.createConnection({
 	password: 'h3ckl3r',
 	database: 'bamazon'
 });
-
-// validateInput makes sure that the user is supplying only positive integers for their inputs
 function validateTheInput(value) {
 	var integer = Number.isInteger(parseFloat(value));
 	var sign = Math.sign(value);
@@ -42,13 +40,11 @@ function promptForPurchase() {
 			filter: Number
 		}
 	]).then(function(input) {
-		// console.log('Customer has selected: \n    item_id = '  + input.item_id + '\n    quantity = ' + input.quantity);
 
 		var item = input.item_id;
 		var quantity = input.quantity;
 
-		// Query db to confirm that the given item ID exists in the desired quantity
-		var queryStr = 'SELECT * FROM products WHERE ?';
+		var queryStr = 'select * from products WHERE ?';
 
 		connection.query(queryStr, {item_id: item}, function(err, data) {
 			if (err) throw err;
@@ -81,7 +77,7 @@ function promptForPurchase() {
 }
 function takeInventory() {
 	var data;
-	queryStr = 'SELECT * FROM products order by item_id';
+	queryStr = 'select * from products order by item_id';
 	connection.query(queryStr, function(err, data) {
 		if (err) throw err;
 
