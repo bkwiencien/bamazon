@@ -72,7 +72,7 @@ function promptForPurchase() {
 						connection.end();
 					})
 				} else {
-                    status = "not enough in stock to honor request";
+                    status = "Insufficient quantity in stock to honor request";
 					takeInventory();
 				}
 			}
