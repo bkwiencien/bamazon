@@ -3,4 +3,9 @@ insert into products (product_name,scientific_name,department_name,price,stock_q
 insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Cherymoya','Annona cherimola','fruit',3.00,10);	
 insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Platonia','Platonia insignis','fruit',3.00,10);	
 insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Breadfruit','Artocarpus altilis','fruit',3.00,5); 	
+insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('broccoli ',' Brassica oleracea','vegatable',2.50,50); 	
+insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Spinach',' Spinacia oleracea','vegatable',2.50,50);
+insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Lettuce','Lactuca sativa','vegatable',1.50,40);	
+insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Carrots','aucus carota ','vegatable',2.50,40);
+insert into products (product_name,scientific_name,department_name,price,stock_quantity) values('Aspagus','Asparagus officinalis','vegatable',2.50,20);	
 commit;
