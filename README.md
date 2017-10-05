@@ -10,4 +10,5 @@
 !video [happy_day_scenario](./documents/movie/happy_day_scenario.mov)
 ### The second video will show bamazon.js responding to an invalid item_id.
 !video [invalid item_id](./documents/movie/invalid_item_id.mov)
-### The third video will show bamazon.js responding to an invalid quantity.
+### The third video will show bamazon.js responding to an invalid quantity and other input problems.
+!video [various errors] (./documents/movie/various_invalid_inputs.mov)
