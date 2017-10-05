@@ -48,7 +48,6 @@ function promptForPurchase() {
 
 		connection.query(queryStr, {item_id: item}, function(err, data) {
 			if (err) throw err;
-			console.log("doing the check" +data.length);
 			if (data.length == 0) {
 				console.log('error: Invalid Item ID.');
 				status ="error: invalid item id";
