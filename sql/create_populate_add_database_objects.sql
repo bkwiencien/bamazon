@@ -1,4 +1,5 @@
 -- create the database --
+drop database if exists bamazon;
 create datbase bamazon;
 use bamazon;
 -- create the table --
